@@ -182,7 +182,7 @@ header li {
 
     .banner h1 {
         font-size: 6vw;
-        padding: 2rem;
+        padding: 5rem 0;
     }
 
     .banner span {
@@ -196,6 +196,10 @@ header li {
 
 /* 4. Main Content */
 
+.blurb {
+    text-align: center;
+}
+
 .main_content {
     margin: 0 10%;
     margin-top: 1rem;
@@ -206,7 +210,7 @@ header li {
 }
 
 .main_content .content {
-    background-color: hsl(0, 0%, 100%, 0.8);
+    background-color: hsl(0, 0%, 100%, 0.7);
     max-width: 17rem;
     padding: 0 5%;
     border-radius: 0.5rem;
@@ -227,7 +231,7 @@ section .container {
 
 #yugioh .container {
     background-image: url(./images/Card_Backs/yugioh_card_back.jpg);
-    background-size: 17rem;
+    background-size: 17.5rem;
     background-repeat: no-repeat;
     grid-area: yugioh;
 }
@@ -239,11 +243,11 @@ section .container {
     grid-area: digimon;
 }
 
-#the_mission .container {
-    background-image: url(./images/tcg.avif);
-    background-size: 30rem;
+#magic .container {
+    background-image: url(./images/Card_Backs/Magic_card_back.webp);
+    background-size: 18rem;
     background-repeat: no-repeat;
-    grid-area: the_mission;
+    grid-area: magic;
 }
 
 .main_content span {
@@ -258,7 +262,7 @@ section .container {
 .pokemon,
 .yugioh,
 .digimon,
-.the_mission {
+.magic {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,13 +296,16 @@ section .container {
         "pokemon"
         "yugioh"
         "digimon"
-        "the_mission";
+        "magic";
         margin: 0;
+    }
+
+    .line {
+        border-top: black 1px solid;
     }
 }
 
 /* 5. Footer */
-
 
 #footer .container {
     justify-content: space-between;
@@ -306,4 +313,12 @@ section .container {
     padding: 0 10%;
     border-top: 1px black solid;
     font-size: 0.75rem;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 0.9);
 }
