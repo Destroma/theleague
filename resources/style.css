@@ -39,6 +39,7 @@ img {
 a {
     color: black;
     text-decoration: none;
+    max-height: 5rem;
 }
 
 a:hover {
@@ -86,7 +87,7 @@ header .container {
     justify-content: space-between;
     border-bottom: 1px black solid;
     padding: 0 10%;
-    margin: 0 2%;
+    margin: 0;
 }
 
 header .left {
@@ -124,6 +125,10 @@ header li {
     header li {
         padding-left: 0.25rem;
     }
+
+    header .logo {
+        height: 5rem;
+    }
 }
 
 /* 3. Banner */
@@ -145,6 +150,8 @@ header li {
     flex: 1;
     align-items: stretch;
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .banner .logo {
@@ -154,6 +161,13 @@ header li {
     align-self: center;
     margin-top: 5%;
 }
+
+.banner .yugioh_logo {
+    width: 20rem;
+    align-self: center;
+    margin: 2rem 0 0;
+}
+
 
 .banner h1 {
     text-align: center;
@@ -174,9 +188,12 @@ header li {
 
     .banner .container {
         height: 10%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
     
-    .banner .logo{
+    .banner .logo,
+    .banner .yugioh_logo {
         display: none;
     }
 
@@ -217,35 +234,67 @@ header li {
     position: relative;
 }
 
+#pokemon .content,
+#yugioh .content,
+#digimon .content {
+    width: 99%;
+    height: 100%;
+    background: none;
+}
+
 section .container {
-    height: 25rem;
+    height: 23.5rem;
     padding: 5%;
+}
+
+#pokemon {
+    align-self: end;
+    justify-self: end;
+    width: 18.25rem;
+}
+
+#yugioh {
+    align-self: end;
+    justify-self: start;
+    width: 17.5em;
+}
+
+#digimon {
+    align-self: start;
+    justify-self: end;
+    width: 17.75em;
+}
+
+#magic {
+    align-self: start;
+    justify-self: start;
+    width: 17.5em;
 }
 
 #pokemon .container {
     background-image: url(./images/Card_Backs/pokemon_card_back.webp);
-    background-size: 28rem;
+    background-size: 17.5rem;
     background-repeat: no-repeat;
     grid-area: pokemon;
 }
 
 #yugioh .container {
     background-image: url(./images/Card_Backs/yugioh_card_back.jpg);
-    background-size: 17.5rem;
+    background-size: 16.75rem;
     background-repeat: no-repeat;
     grid-area: yugioh;
 }
 
 #digimon .container {
     background-image: url(./images/Card_Backs/digimon_card_back.webp);
-    background-size: 17.75rem;
+    background-size: 17.5rem;
     background-repeat: no-repeat;
     grid-area: digimon;
 }
 
 #magic .container {
     background-image: url(./images/Card_Backs/Magic_card_back.webp);
-    background-size: 18rem;
+    background-size: 17.5rem;
     background-repeat: no-repeat;
     grid-area: magic;
 }
@@ -271,13 +320,22 @@ section .container {
 .infobox {
     text-align: center;
     vertical-align: middle;
-    margin: auto;
-    padding: 2% 0;
     line-height: 1.25rem;
+    min-width: 18.25rem;
+    max-width: 30rem;
 }
 
 .infobox h1 {
     margin: 0;
+}
+
+.infobox p {
+    padding: 0 5%;
+}
+
+.infobox li {
+    text-align: left;
+    padding: 0.5rem 1.5rem;
 }
 
 .map_location {
@@ -302,6 +360,13 @@ section .container {
 
     .line {
         border-top: black 1px solid;
+    }
+
+    #pokemon,
+    #yugioh,
+    #digimon,
+    #magic {
+        justify-self: center;
     }
 }
 
