@@ -44,6 +44,7 @@ a {
 
 a:hover {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .club_name {
@@ -55,6 +56,10 @@ a:hover {
     margin-right: 1rem;
 }
 
+.underline {
+    text-decoration: underline;    
+}
+
 @media only screen and (max-width: 768px) {
 
     .button {
@@ -62,7 +67,7 @@ a:hover {
         border-radius: 1rem;
         color: white;
         padding: 0.5rem;
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
 
     .logo {
